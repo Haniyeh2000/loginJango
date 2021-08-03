@@ -7,10 +7,15 @@
 <body>
 {{ value|default:1 }}
 <label >{{ value }}</label>
-{#<form method="post">#}
-{#    {% csrf_token %}#}
-{##}
-{#</form>#}
+<form method="post">
+    {% csrf_token %}
+    <label>username:</label>
+    <input type="text">
+    <br>
+    <label>password:</label>
+    <input type="text">
+    <button type="submit">Login</button>
+</form>
 <ul>
 {% for index in value %}
     <li>{{ index }}</li>
