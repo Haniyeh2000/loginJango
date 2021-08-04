@@ -5,21 +5,28 @@
     <title>login</title>
 </head>
 <body>
-{{ value|default:1 }}
-<label >{{ value }}</label>
-<form method="post">
-    {% csrf_token %}
+{% for su in users %}
     <label>username:</label>
-    <input type="text">
+    <label>{{ su.username}}</label>
     <br>
     <label>password:</label>
-    <input type="text">
-    <button type="submit">Login</button>
-</form>
-<ul>
-{% for index in value %}
-    <li>{{ index }}</li>
+    <label>{{ su.password}}</label>
+    <br><br><br>
 {% endfor %}
-</ul>
+
+{#<form method="post">#}
+{#    {% csrf_token %}#}
+{#    <label>username:</label>#}
+{#    <input type="text">#}
+{#    <br>#}
+{#    <label>password:</label>#}
+{#    <input type="text">#}
+{#    <button type="submit">Login</button>#}
+{#</form>#}
+{#<ul>#}
+{#{% for index in value %}#}
+{#    <li>{{ index }}</li>#}
+{#{% endfor %}#}
+{#</ul>#}
 </body>
 </html>
