@@ -21,7 +21,6 @@ urlpatterns = [
     path('', include(('shop.urls','shopIn'),namespace='shopIn')),
     path('shop/',include(('shop.urls','ushop'),namespace='ushop')),
     path('blog/',include(('blog.urls','blogIn'),namespace='blogIn')),
-    path('post/',include(('post.urls','postIn'),namespace='postIn')),
     path('service/',include(('service.urls','serviceIn'),namespace='serviceIn')),
     path('login/',include(('login.urls','loginIn'),namespace='loginIn'))
 ]
